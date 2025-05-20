@@ -2,3 +2,6 @@ node_modules/
 .cache/
 coverage/
 app.log
+.env
+.test.env
+.dev.env

@@ -3,9 +3,9 @@ import { fileURLToPath } from "url";
 import path from "path";
 
 const fileExtensions = {
-  development: ".env.development",
+  development: ".dev.env",
   production: ".env",
-  test: ".env.test",
+  test: ".test.env",
 };
 
 export const ENV = process.env.NODE_ENV || "development";
