@@ -5,6 +5,7 @@ import { logger } from "./misc/logger/logger.mjs";
 import { ENV, PORT } from "./misc/config/config.mjs";
 import helmet from "helmet";
 import { httpLogger } from "./misc/logger/httpLogger.mjs";
+import "./misc/cleanup/cleanup.mjs";
 
 /* start server */
 logger.info("Starting server...");
@@ -30,9 +31,10 @@ app.use(pinoHttp(httpLogger));
 /* MongoDB Connection */
 
 /* Start Server */
-if (ENV !== "test")
+if (ENV !== "test") {
   app.listen(PORT, () => {
     logger.info(`Server is running on port ${PORT}`);
   });
+}
 
 export default app;

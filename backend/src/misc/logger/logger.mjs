@@ -1,4 +1,3 @@
-import path from "path";
 import pino from "pino";
 import { __dirname, ENV, LOG_LEVEL } from "../config/config.mjs";
 import { logFileTransport } from "./logFileTransport.mjs";
@@ -9,7 +8,6 @@ const pinoConfig = {
   transport: {
     targets: [logFileTransport],
   },
-  serializers: {},
 };
 
 // enable pino pretty if in dev mode
